@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "47be4d1c-d082-4fc8-9694-cce76ff6829e",
+		"name": "Hotel-Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35230488",
+		"_collection_link": "https://grey-satellite-4585.postman.co/workspace/API_Test~c3b39739-ccc6-4f94-89b7-d03272c0f020/collection/35230488-47be4d1c-d082-4fc8-9694-cce76ff6829e?action=share&source=collection_link&creator=35230488"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Riya Kumar\",\r\n    \"email\":\"riya@gmail.com\",\r\n    \"password\": \"riya\",\r\n    \"phoneNumber\": \"9474497520\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"navrajk4508@gmail.com\",\r\n    \"password\": \"navraj4508\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAllUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Riya Kumar\",\r\n    \"email\":\"riya@gmail.com\",\r\n    \"password\": \"riya\",\r\n    \"phoneNumber\": \"9474497520\"\r\n    \r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/users/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4040/users/history/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"users",
+								"history",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4040/users/getId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"users",
+								"getId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4040/users/deleteId/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"users",
+								"deleteId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rooms",
+			"item": [
+				{
+					"name": "addRooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://www.trimcastlehotel.com/wp-content/uploads/2023/08/image-8-1.jpg\",\r\n    \"roomType\":\"Family room\",\r\n    \"roomPrice\":\"2000\",\r\n    \"roomDescription\":\"A spacious Family Room designed for comfort, featuring multiple beds and modern amenities to accommodate the whole family.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gel-all-room",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-room-by-Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "roomById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/roomById/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"roomById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "availableRoom",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/availableRoom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"availableRoom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "available-room-by-dateAndType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/rooms/available-rooms-by-date-and-type?checkInDate=2025-11-05&checkOutDate=2025-11-10&roomType=single bed\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"rooms",
+								"available-rooms-by-date-and-type"
+							],
+							"query": [
+								{
+									"key": "checkInDate",
+									"value": "2025-11-05"
+								},
+								{
+									"key": "checkOutDate",
+									"value": "2025-11-10"
+								},
+								{
+									"key": "roomType",
+									"value": "single bed\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "add booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"checkInDate\": \"2025-11-05\",\r\n  \"checkOutDate\": \"2025-11-10\",\r\n  \"numOfAdults\": 2,\r\n  \"numOfChildren\": 1,\r\n  \"totalNumOfGuest\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/booking/book-room/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"booking",
+								"book-room",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/booking/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"booking",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmation-code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/booking/confirmation-code/728Y42P83Z",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"booking",
+								"confirmation-code",
+								"728Y42P83Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel-booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomPhotoUrl\":\"https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg\",\r\n    \"roomType\":\"Single Bed\",\r\n    \"roomPrice\":\"300\",\r\n    \"roomDescription\":\"A cozy and comfortable room ideal for solo travelers, featuring a single bed and essential amenities for a relaxing stay.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4040/booking/cancel/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"booking",
+								"cancel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "create-order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/payments/create-order/1?amount=1000.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"payments",
+								"create-order",
+								"1"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "1000.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order_id\": \"order_RaltEhOj10d0dK\",\r\n  \"payment_id\": \"pay_OwX9lXq52Tby3r\",\r\n  \"signature\": \"7a9f60e2bba34df4d2a8a...\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4040/payments/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4040",
+							"path": [
+								"payments",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
