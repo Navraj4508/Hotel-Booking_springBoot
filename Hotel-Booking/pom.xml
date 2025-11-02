@@ -116,7 +116,6 @@
     </dependencies>
 
 	<build>
-        <finalName>hotel-booking</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
