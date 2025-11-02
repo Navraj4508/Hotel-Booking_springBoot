@@ -9,7 +9,7 @@ This system allows users to **search available rooms, book hotels, make payments
 
 - 🔐 **JWT Authentication & Authorization**  
 - 🏠 **Room Management** – Add, edit, and view room details  
-- 📅 **Booking Management** – Create and manage room bookings  
+- 📅 **Booking Management** – Create and manage room bookings and Notification sends in email
 - 💳 **Payment Integration (Razorpay)**  
 - 👥 **Role-Based Access** (Admin/User)  
 - ⚙️ **Global Exception Handling & Validation**  
